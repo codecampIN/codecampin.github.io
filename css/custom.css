@@ -65,7 +65,7 @@ Home Page
 	color: #F5E8DF;
 }
 
-.home-page-headline button{
+.cta{
   margin-top: 1em;
   background-color: #C5631D; /*#19B533; - green*/
   border-radius: 0px;
@@ -126,7 +126,13 @@ Home Page
 
 .home-page-how{
 background-color: #F5E8DF; 
+padding-bottom: 1em;
 }
+
+.home-page-how .btn{ 
+
+}
+
 
 .home-page-how h4{
   font-size: 1.7em;
@@ -139,10 +145,30 @@ background-color: #F5E8DF;
 .curriculum-web{
   margin-top: -1.4em;
   background-color: #F5E8DF;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #D5CFCA;
+}
+
+.curriculum-web h3{
+  color: #C5631D;
+}
+
+.curriculum-web h1{
+  font-weight: bold;
+  color: #36ADD5;
 }
 
 .curriculum-android{
   background-color:#EDE5F1; 
+}
+
+.curriculum-android h3{
+  color: #C5631D;
+}
+
+.curriculum-android h1{
+  font-weight: bold;
+  color: #36ADD5;
 }
 
 .bottom-side{
