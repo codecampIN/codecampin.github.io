@@ -40,13 +40,23 @@ NavBar
 .curriculum-page-bg .navbar{
  background-color: black;
  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,rgba(0,0,0,0.75)));
+ background: -moz-linear-gradient(linear, left top, left bottom, color-stop(100%,rgba(0,0,0,0.75))); 
+ background: -o-gradient(linear, left top, left bottom, color-stop(100%,rgba(0,0,0,0.75)));
 }
 
 /* =================
 Home Page
 =================== */
 .home-page-bg{
+  background: url("../images/code.jpg") center center no-repeat;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,rgba(0,0,0,0.75))), url("../images/code.jpg") center center no-repeat; 
+  background: url("../images/code.jpg") center center no-repeat, -webkit-linear-gradient(top, rgba(0,0,0,0.75), rgba(0,0,0,0.75)); /* Chrome 10+, Saf5.1+ */
+  background: url("../images/code.jpg") center center no-repeat,    -moz-linear-gradient(top, rgba(0,0,0,0.75), rgba(0,0,0,0.75)); /* FF3.6+ */
+  background: url("../images/code.jpg") center center no-repeat,     -ms-linear-gradient(top, color-stop(100%,rgba(0,0,0,0.75)), color-stop(100%,rgba(0,0,0,0.75))); /* IE10 */
+  background: url("../images/code.jpg") center center no-repeat,      -o-linear-gradient(top, color-stop(100%,rgba(0,0,0,0.75)), color-stop(100%,rgba(0,0,0,0.75))); /* Opera 11.10+ */
+  background: url("../images/code.jpg") center center no-repeat,         linear-gradient(top, color-stop(100%,rgba(0,0,0,0.75)), color-stop(100%,rgba(0,0,0,0.75))); /* W3C */
+  
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -104,10 +114,6 @@ Home Page
 .top-gap{
   padding-top: 1.5em;
   padding-bottom: 1.5em;
-}
-
-.home-page-process-description{
-  padding-top: 5%;
 }
 
 
