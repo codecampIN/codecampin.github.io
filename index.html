@@ -3,9 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Cache-control" content="public">
-		<meta name="description" content="Enhancing Practical Education in Indian Colleges. CodeCamp is a course of hands-on workshops guided by world class resources, projects and assignments.">
-		<meta name="keywords" content="Hands-on Workshops, Web development, Android development, HTML, CSS, JavaScript, bootstrap, Ruby on Rails, Java, workshops in colleges, bangalore colleges, code camps india">
+		<meta name="description" content="Code camp india. workshops in colleges. Learn web and mobile app developement. CodeCamp is a course of hands-on workshops guided by world class resources, projects and assignments.">
+		<meta name="keywords" content="Hands-on Workshops, Web development, Android development, HTML, CSS, JavaScript, bootstrap, curriculum, Ruby on Rails, Java, workshops in colleges, bangalore colleges, code camps india">
 
 		<title>CodeCamp</title>
 		<!-- Latest compiled and minified CSS -->
@@ -45,10 +46,10 @@
 			    </div><!-- /.navbar-collapse -->
 			  </div><!-- /.container-fluid -->
 		  </nav>
-		  <div class="text-center home-page-headline">
+		  <div class="col-md-12 col-sm-12 text-center home-page-headline">
 				<!-- <h1>Enhancing Practical Education In Colleges</h1> -->
 				<h3 class="">Series Of <span class="count">10</span> Hands-on Workshops, <span class="count">15</span>+ Projects To Help You Learn Web And Mobile App Development</h3>
-				<button class="btn btn-lg cta" type="button" data-toggle="modal" data-target="#collegeModal">Request A Camp In Your College</button>
+				<button class="btn btn-lg cta" id="call-to-action" type="button" data-toggle="modal" data-target="#collegeModal">Request A Camp In Your College</button>
 			</div>
 		</div>
 
@@ -122,9 +123,8 @@
 		<footer>
 			<div class="container text-center">
 				<div class="col-md-12 footer-content">
-					
-						Email Us at- team@codecamp.in
-					
+						Email us - team@codecamp.in <br>
+					  Call us - +919535092796
 				</div>
 			</div>
 		</footer>
@@ -179,37 +179,35 @@
 		Parse.initialize("NMIxd2R4HDPieiD1CVP4h8zZ6kCLIS0sMwH97aNW", "e0OUfLnqims2bmLJosex2r8wYqlRQiiPV77nDr5X");
 
 		function fromSubmit(form){
-			console.log("hello");
-
 			var College = Parse.Object.extend("College");
 			var college = new College();
 			var email = form.email.value;
 			var collegeName = form.collegeName.value;
+			event.preventDefault();
 
 			college.save({
 				email: email,
 				collegeName: collegeName
-			},{
+				},{
 			  success: function(college) {
 			    // Hooray! Let them use the app now.
+			    $('.cta').html("Thanks. We will get back soon.")
 			  },
 			  error: function(college, error) {
 			  }
 			});
-			// event.preventDefault();
-			$('#collegeModal').hide();
+			$('#collegeModal').modal('toggle');
+			$('#call-to-action').html("Thanks. We will get back soon.").removeAttr("data-target");
 		};
 
 		function signupFromSubmit(form){
-			console.log("hello");
-
 			var Signup = Parse.Object.extend("Signup");
 			var signup = new Signup();
 			var email = form.email.value;
 
 			signup.save({
 				email: email,
-			},{
+				},{
 			  success: function(college) {
 			    // Hooray! Let them use the app now.
 			    $('#signupSubmitForm').html("Thanks! We'll Keep You Posted.")
