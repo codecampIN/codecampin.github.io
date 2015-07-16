@@ -212,6 +212,18 @@ Modal
   background-color: rgb(172, 121, 62);
 }
 
+/*===========
+About
+============*/
+.about-main{
+  padding-top: 1em;
+  margin-bottom: 5.6em;
+  text-align: left;
+}
+
+.about-main p{
+  font-size: 1.2em;
+}
 
 /* Media Queries*/
 
